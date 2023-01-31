@@ -12,7 +12,7 @@ defineProps<{
 
 <style scoped>
 .grid-item {
-  background-color: hsla(160, 100%, 37%, 1);
+  background-color: var(--card-bg-color);
   padding: 1rem;
   border-radius: 0.2rem;
 
