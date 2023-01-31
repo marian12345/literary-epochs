@@ -1,8 +1,6 @@
 <script setup lang="ts">
 defineProps<{
   name: string;
-  start: number;
-  end: number;
 }>();
 </script>
 
@@ -15,8 +13,13 @@ defineProps<{
   background-color: var(--card-bg-color);
   padding: 1rem;
   border-radius: 0.2rem;
+  overflow: hidden;
+  overflow-wrap: break-word;
 
-  grid-row-start: 1;
-  grid-row-end: 3;
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 </style>
