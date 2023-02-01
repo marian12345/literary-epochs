@@ -1,11 +1,16 @@
 <script setup lang="ts">
 defineProps<{
-  name: string;
+  era: Object;
 }>();
 </script>
 
 <template>
-  <div class="grid-item">{{ name }}</div>
+  <div class="grid-item">
+    <h1>
+      <h2>({{ era.timePeriod }})</h2>
+      {{ era.name }}
+    </h1>
+  </div>
 </template>
 
 <style scoped>
@@ -19,7 +24,23 @@ defineProps<{
   writing-mode: vertical-lr;
   text-orientation: sideways;
 
-  font-weight: 700;
   letter-spacing: 0.3px;
+}
+
+.grid-item:hover {
+  cursor: pointer;
+}
+
+.grid-item h1 {
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.grid-item h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: 0.5px;
 }
 </style>
