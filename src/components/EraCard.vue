@@ -33,7 +33,7 @@ defineProps<{
 
 .grid-item h1 {
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -42,5 +42,25 @@ defineProps<{
   font-weight: normal;
   margin: 0;
   letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 760px) {
+  .grid-item {
+    padding: 1rem 0.3rem;
+  }
+
+  .grid-item h2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .grid-item {
+    padding: 1rem 0rem;
+  }
+
+  .grid-item h1 {
+    font-size: 1.3rem;
+  }
 }
 </style>

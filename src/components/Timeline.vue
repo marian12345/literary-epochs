@@ -35,6 +35,12 @@ const cards = ref([
   { id: 9, name: "Weimarer Klassik", timePeriod: "1786 - 1805", gridarea: "j" },
   { id: 10, name: "Romantik", timePeriod: "1795 - 1815", gridarea: "k" },
   { id: 11, name: "Biedermeier", timePeriod: "1815 - 1848", gridarea: "l" },
+  {
+    id: 11,
+    name: "Vormärz / Junges Deutschland",
+    timePeriod: "1815 - 1848",
+    gridarea: "m",
+  },
 ]);
 </script>
 
@@ -82,32 +88,46 @@ const cards = ref([
     ". . . d . f g ."
     ". . i d . . g h"
     ". . j . k . . ."
-    ". . . . l . . .";
+    ". . . m l . . .";
 
   grid-auto-columns: minmax(0, 1fr);
   gap: 1rem;
   min-height: 90vh;
 }
 
-@media screen {
+@media screen and (max-width: 850px) {
+  .grid-container {
+    display: grid;
+
+    grid-template-areas:
+      "a . . . . . "
+      "a . . . . . "
+      "a . . . . . "
+      "a . . . . . "
+      "a . . . . . "
+      "a b . . . . "
+      "a b . . . . "
+      "a b . . . . "
+      ". b . . . . "
+      ". b . . . . "
+      ". b . . . . "
+      ". b . . . . "
+      ". b . . . . "
+      ". . . . . . "
+      ". . . . . . "
+      ". . c . . . "
+      ". . c . . . "
+      ". . c . . . "
+      ". . c . . . "
+      ". . c . . . "
+      ". . c . . . "
+      ". . c . . . "
+      ". . c . . . "
+      ". . . d e . "
+      ". g . d . f "
+      "h g i d . . "
+      ". . j . k . "
+      ". . . m l . ";
+  }
 }
-
-/**
-grid-template-areas:
-    "a b c d e f g h"
-    ". . i j k l . .";
-
-
-.grid-item-1 {
-  grid-row-start: 1;
-  grid-row-end: 4;
-}
-
-grid-template-rows: repeat(3, 1fr);
-grid-template-columns: repeat(12, minmax(0, 1fr));
-
-grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  grid-template-columns: repeat(12, minmax(1fr, 1fr));
- */
 </style>
