@@ -36,7 +36,7 @@ const cards = ref([
   { id: 10, name: "Romantik", timePeriod: "1795 - 1815", gridarea: "k" },
   { id: 11, name: "Biedermeier", timePeriod: "1815 - 1848", gridarea: "l" },
   {
-    id: 11,
+    id: 12,
     name: "Vormärz / Junges Deutschland",
     timePeriod: "1815 - 1848",
     gridarea: "m",
