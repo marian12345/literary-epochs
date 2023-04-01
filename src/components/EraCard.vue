@@ -1,6 +1,7 @@
 <script setup lang="ts">
+type era = { id: number; name: string; timePeriod: string; gridArea: string };
 defineProps<{
-  era: Object;
+  era: era;
 }>();
 </script>
 
