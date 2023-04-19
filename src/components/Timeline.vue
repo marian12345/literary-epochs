@@ -89,7 +89,8 @@ let cards: era[] = jsonData;
       ". g . d . f "
       "h g i d . . "
       ". . j . k . "
-      ". . . m l . ";
+      ". . m n l . "
+      "o . . . . . ";
   }
 }
 </style>
