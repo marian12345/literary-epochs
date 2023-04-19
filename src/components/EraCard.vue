@@ -40,7 +40,7 @@ defineProps<{
 
 .grid-item h2 {
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 300;
   margin: 0;
   letter-spacing: 0.5px;
 }
