@@ -1,12 +1,18 @@
 <script setup lang="ts">
-type era = { id: number; name: string; timePeriod: string; gridArea: string };
-defineProps<{
-  era: era;
+import { useRouter, useRoute } from "vue-router";
+import type { Era } from "../types/Era";
+const props = defineProps<{
+  era: Era;
 }>();
+const router: any = useRouter();
+const route: any = useRoute();
+function goToEraPage(): void {
+  router.push({ name: "era", params: { eraname: props.era.pageName } });
+}
 </script>
 
 <template>
-  <div class="grid-item">
+  <div class="grid-item" @click="goToEraPage">
     <h1>
       <h2>({{ era.timePeriod }})</h2>
       {{ era.name }}
