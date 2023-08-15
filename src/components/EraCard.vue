@@ -40,7 +40,7 @@ function goToEraPage(): void {
 
 @media screen and (max-width: 760px) {
   .grid-item {
-    padding: 1rem 0.3rem;
+    /*padding: 1rem 0.3rem;*/
   }
 
   .grid-item h2 {
