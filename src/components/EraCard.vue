@@ -5,7 +5,7 @@ const props = defineProps<{
   era: Era;
 }>();
 const router: any = useRouter();
-const route: any = useRoute();
+
 function goToEraPage(): void {
   router.push({ name: "era", params: { eraname: props.era.pageName } });
 }
@@ -36,19 +36,6 @@ function goToEraPage(): void {
 
 .grid-item:hover {
   cursor: pointer;
-}
-
-.grid-item h1 {
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.grid-item h2 {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 0;
-  letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 760px) {
