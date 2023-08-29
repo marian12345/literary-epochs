@@ -1,12 +1,18 @@
 <script setup lang="ts">
-type era = { id: number; name: string; timePeriod: string; gridArea: string };
-defineProps<{
-  era: era;
+import { useRouter, useRoute } from "vue-router";
+import type { Era } from "../types/Era";
+const props = defineProps<{
+  era: Era;
 }>();
+const router: any = useRouter();
+
+function goToEraPage(): void {
+  router.push({ name: "era", params: { eraname: props.era.pageName } });
+}
 </script>
 
 <template>
-  <div class="grid-item">
+  <div class="grid-item" @click="goToEraPage">
     <h1>
       <h2>({{ era.timePeriod }})</h2>
       {{ era.name }}
@@ -32,22 +38,9 @@ defineProps<{
   cursor: pointer;
 }
 
-.grid-item h1 {
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.grid-item h2 {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 0;
-  letter-spacing: 0.5px;
-}
-
 @media screen and (max-width: 760px) {
   .grid-item {
-    padding: 1rem 0.3rem;
+    /*padding: 1rem 0.3rem;*/
   }
 
   .grid-item h2 {

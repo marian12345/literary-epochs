@@ -3,90 +3,105 @@
     "id": 0,
     "name": "Griechische Antike",
     "timePeriod": "800 v. Chr. - 30 v. Chr.",
-    "gridArea": "a"
+    "gridArea": "a",
+    "pageName": "griechische-antike"
   },
   {
     "id": 1,
     "name": "Römische Antike",
     "timePeriod": "300 v. Chr. - 529 n. Chr.",
-    "gridArea": "b"
+    "gridArea": "b",
+    "pageName": "roemische-antike"
   },
   {
     "id": 2,
     "name": "Mittelalter",
     "timePeriod": "750 - 1470",
-    "gridArea": "c"
+    "gridArea": "c",
+    "pageName": "mittelalter"
   },
   {
     "id": 3,
     "name": "Comedia Dell'Arte",
     "timePeriod": "1500 - 1800",
-    "gridArea": "d"
+    "gridArea": "d",
+    "pageName": "comedia-dell-arte"
   },
   {
     "id": 4,
     "name": "Rennaissance",
     "timePeriod": "1470 - 1600",
-    "gridArea": "e"
+    "gridArea": "e",
+    "pageName": "rennaissance"
   },
   {
     "id": 5,
     "name": "Elisabethanisches Theater",
     "timePeriod": "1580 - 1625",
-    "gridArea": "f"
+    "gridArea": "f",
+    "pageName": "elisabethanisches-theater"
   },
   {
     "id": 6,
     "name": "Barock",
     "timePeriod": "1600 - 1770",
-    "gridArea": "g"
+    "gridArea": "g",
+    "pageName": "barock"
   },
   {
     "id": 7,
     "name": "Die Aufklärung",
     "timePeriod": "1720 - 1800",
-    "gridArea": "h"
+    "gridArea": "h",
+    "pageName": "die-aufklaerung"
   },
   {
     "id": 8,
     "name": "Sturm und Drang",
     "timePeriod": "1765 - 1785",
-    "gridArea": "i"
+    "gridArea": "i",
+    "pageName": "sturm-und-drang"
   },
   {
     "id": 9,
     "name": "Weimarer Klassik",
     "timePeriod": "1786 - 1805",
-    "gridArea": "j"
+    "gridArea": "j",
+    "pageName": "weimarer-klassik"
   },
   {
     "id": 10,
     "name": "Romantik",
     "timePeriod": "1795 - 1815",
-    "gridArea": "k"
+    "gridArea": "k",
+    "pageName": "romantik"
   },
   {
     "id": 11,
     "name": "Biedermeier",
     "timePeriod": "1815 - 1848",
-    "gridArea": "l"
+    "gridArea": "l",
+    "pageName": "biedermeier"
   },
   {
     "id": 12,
     "name": "Vormärz / Junges Deutschland",
     "timePeriod": "1815 - 1848",
-    "gridArea": "m"
+    "gridArea": "m",
+    "pageName": "vormaerz-junges-deutschland"
   },
   {
     "id": 13,
     "name": "Wiener Volkstheater / Wiener Volkskomödie",
     "timePeriod": "1815 - 1848",
-    "gridArea": "n"
+    "gridArea": "n",
+    "pageName": "wiener-volkstheater-wiener-volkskomoedie"
   },
   {
     "id": 14,
     "name": "Bürgerlicher Realismus",
     "timePeriod": "1848 - 1890",
-    "gridArea": "o"
+    "gridArea": "o",
+    "pageName": "buergerlicher-realismus"
   }
 ]

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import EraCard from "./EraCard.vue";
 import jsonData from "../data/eras.json";
-type era = { id: number; name: string; timePeriod: string; gridArea: string };
-let cards: era[] = jsonData;
+import type { Era } from "../types/Era";
+let cards: Era[] = jsonData;
 </script>
 
 <template>
