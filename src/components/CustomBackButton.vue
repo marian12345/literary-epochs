@@ -18,13 +18,12 @@ function goBack(): void {
 </template>
 
 <style scoped>
-button svg {
-  fill: rgb(138, 170, 229);
-  padding: 0.3em;
-}
-
 button {
   --green: rgb(27, 253, 156);
+  --green-custom-01: rgba(27, 253, 156, 0.1);
+  --green-custom-02: rgba(27, 253, 156, 0.2);
+  --green-custom-04: rgba(27, 253, 156, 0.4);
+  --green-custom-06: rgba(27, 253, 156, 0.6);
   --blue: rgb(138, 170, 229);
   --blue-custom-01: rgba(138, 170, 229, 0.1);
   --blue-custom-02: rgba(138, 170, 229, 0.2);
@@ -44,23 +43,28 @@ button {
   border-radius: 50%;
   width: 5rem;
 
-  border: 2px solid var(--blue);
+  border: 2px solid var(--green);
   background: linear-gradient(
     to right,
-    var(--blue-custom-01) 1%,
+    var(--green-custom-01) 1%,
     transparent 40%,
     transparent 60%,
-    var(--blue-custom-01) 100%
+    var(--green-custom-01) 100%
   );
   color: var(--green);
-  box-shadow: inset 0 0 10px var(--blue-custom-04),
-    0 0 9px 3px var(--blue-custom-01);
+  box-shadow: inset 0 0 10px var(--green-custom-04),
+    0 0 9px 3px var(--green-custom-01);
+}
+
+button svg {
+  fill: var(--green);
+  padding: 0.3em;
 }
 
 button:hover {
   color: #82ffc9;
-  box-shadow: inset 0 0 10px var(--blue-custom-06),
-    0 0 9px 3px var(--blue-custom-02);
+  box-shadow: inset 0 0 10px var(--green-custom-06),
+    0 0 9px 3px var(--green-custom-02);
 }
 
 button:before {
@@ -74,8 +78,8 @@ button:before {
   background: linear-gradient(
     to right,
     transparent 1%,
-    var(--blue-custom-01) 40%,
-    var(--blue-custom-01) 60%,
+    var(--green-custom-01) 40%,
+    var(--green-custom-01) 60%,
     transparent 100%
   );
 }

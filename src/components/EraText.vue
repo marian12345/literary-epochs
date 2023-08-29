@@ -1,23 +1,25 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import { ref } from "vue";
+import type { EraContent } from "../types/EraContent";
 
 const route = useRoute();
+let eraInfo: EraContent = [];
+let contentLoaded: boolean = true;
+try {
+  eraInfo = await import(
+    `../data/${route.params.eraname}/${route.params.eraname}.json`
+  );
+} catch (error) {
+  contentLoaded = false;
+}
 
-const eraInfo = await import(
-  `../data/${route.params.eraname}/${route.params.eraname}.json`
-);
-
-const name = ref(eraInfo.name);
-const timePeriod = ref(eraInfo.timePeriod);
-
-console.log(eraInfo);
-
-console.log(route.params);
+const name: string = ref(eraInfo.name);
+const timePeriod: string = ref(eraInfo.timePeriod);
 </script>
 
 <template>
-  <div class="eraInfo">
+  <div class="eraInfo" v-if="contentLoaded">
     <h1>{{ name }}</h1>
     <h2>{{ timePeriod }}</h2>
     <p>
@@ -31,6 +33,9 @@ console.log(route.params);
       Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
       sit amet.
     </p>
+  </div>
+  <div v-else>
+    <p>Oh nooo ... An error occured. The content could not be loaded :(</p>
   </div>
 </template>
 
