@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import { ref } from "vue";
+import type { Ref } from "vue";
 import type { EraContent } from "../types/EraContent";
 
 const route = useRoute();
-let eraInfo: EraContent = [];
+let eraInfo: EraContent = {
+  id: -1,
+  name: "",
+  timePeriod: "",
+  pageName: "",
+};
 let contentLoaded: boolean = true;
 try {
   eraInfo = await import(
@@ -14,8 +20,8 @@ try {
   contentLoaded = false;
 }
 
-const name: string = ref(eraInfo.name);
-const timePeriod: string = ref(eraInfo.timePeriod);
+const name: Ref<string> = ref<string>(eraInfo.name);
+const timePeriod: Ref<string> = ref<string>(eraInfo.timePeriod);
 </script>
 
 <template>
