@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import EraView from "../views/EraView.vue";
+import EpochView from "../views/EpochView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,9 +11,9 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/era/:eraname",
-      name: "era",
-      component: EraView,
+      path: "/epoch/:epochname",
+      name: "epoch",
+      component: EpochView,
     },
     {
       path: "/about",

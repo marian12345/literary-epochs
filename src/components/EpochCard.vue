@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from "vue-router";
-import type { Era } from "../types/Era";
+import type { Epoch } from "../types/Epoch";
 const props = defineProps<{
-  era: Era;
+  epoch: Epoch;
 }>();
 const router: any = useRouter();
 
-function goToEraPage(): void {
-  router.push({ name: "era", params: { eraname: props.era.pageName } });
+function goToEpochPage(): void {
+  router.push({ name: "epoch", params: { epochname: props.epoch.pageName } });
 }
 </script>
 
 <template>
-  <div class="grid-item" @click="goToEraPage">
+  <div class="grid-item" @click="goToEpochPage">
     <h1>
-      <h2>({{ era.timePeriod }})</h2>
-      {{ era.name }}
+      <h2>({{ epoch.timePeriod }})</h2>
+      {{ epoch.name }}
     </h1>
   </div>
 </template>

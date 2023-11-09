@@ -2,10 +2,10 @@
 import { useRoute } from "vue-router";
 import { ref } from "vue";
 import type { Ref } from "vue";
-import type { EraContent } from "../types/EraContent";
+import type { EpochContent } from "../types/EpochContent";
 
 const route = useRoute();
-let eraInfo: EraContent = {
+let epochInfo: EpochContent = {
   id: -1,
   name: "",
   timePeriod: "",
@@ -13,19 +13,19 @@ let eraInfo: EraContent = {
 };
 let contentLoaded: boolean = true;
 try {
-  eraInfo = await import(
-    `../data/${route.params.eraname}/${route.params.eraname}.json`
+  epochInfo = await import(
+    `../data/${route.params.epochname}/${route.params.epochname}.json`
   );
 } catch (error) {
   contentLoaded = false;
 }
 
-const name: Ref<string> = ref<string>(eraInfo.name);
-const timePeriod: Ref<string> = ref<string>(eraInfo.timePeriod);
+const name: Ref<string> = ref<string>(epochInfo.name);
+const timePeriod: Ref<string> = ref<string>(epochInfo.timePeriod);
 </script>
 
 <template>
-  <div class="eraInfo" v-if="contentLoaded">
+  <div class="epochInfo" v-if="contentLoaded">
     <h1>{{ name }}</h1>
     <h2>{{ timePeriod }}</h2>
     <p>
@@ -46,7 +46,7 @@ const timePeriod: Ref<string> = ref<string>(eraInfo.timePeriod);
 </template>
 
 <style scoped>
-.eraInfo {
+.epochInfo {
   width: 100%;
   display: flex;
   flex-direction: column;

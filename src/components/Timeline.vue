@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import EraCard from "./EraCard.vue";
-import jsonData from "../data/eras.json";
-import type { Era } from "../types/Era";
-let cards: Era[] = jsonData;
+import EpochCard from "./EpochCard.vue";
+import jsonData from "../data/epochs.json";
+import type { Epoch } from "../types/Epoch";
+let cards: Epoch[] = jsonData;
 </script>
 
 <template>
   <div class="grid-container">
-    <EraCard
+    <EpochCard
       v-for="card in cards"
       :key="card.id"
-      :era="card"
+      :epoch="card"
       :class="'grid-item-' + card.id"
       :style="{ 'grid-area': card.gridArea }"
     />

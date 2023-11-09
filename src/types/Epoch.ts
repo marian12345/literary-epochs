@@ -1,4 +1,4 @@
-export type Era = {
+export type Epoch = {
   id: number;
   name: string;
   timePeriod: string;
