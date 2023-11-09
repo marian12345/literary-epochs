@@ -10,9 +10,9 @@ let cards: Epoch[] = jsonData;
     <EpochCard
       v-for="card in cards"
       :key="card.id"
-      :epoch="card"
       :class="'grid-item-' + card.id"
       :style="{ 'grid-area': card.gridArea }"
+      :epoch="card"
     />
   </div>
 </template>
@@ -50,7 +50,13 @@ let cards: Epoch[] = jsonData;
     ". . i d . . g h"
     ". . j . k . . ."
     ". . m n l . . ."
-    "o . . . . . . .";
+    "p o . . . . . ."
+    "p . q r t v w ."
+    "p . . r t v w ."
+    "s u x . t v w ."
+    "s u x . t v w y"
+    ". . . z . . . y"
+    ". . . . . . . y";
 
   grid-auto-columns: minmax(0, 1fr);
   gap: 1rem;
@@ -62,35 +68,41 @@ let cards: Epoch[] = jsonData;
     display: grid;
 
     grid-template-areas:
-      "a . . . . . "
-      "a . . . . . "
-      "a . . . . . "
-      "a . . . . . "
-      "a . . . . . "
-      "a b . . . . "
-      "a b . . . . "
-      "a b . . . . "
-      ". b . . . . "
-      ". b . . . . "
-      ". b . . . . "
-      ". b . . . . "
-      ". b . . . . "
-      ". . . . . . "
-      ". . . . . . "
-      ". . c . . . "
-      ". . c . . . "
-      ". . c . . . "
-      ". . c . . . "
-      ". . c . . . "
-      ". . c . . . "
-      ". . c . . . "
-      ". . c . . . "
-      ". . . d e . "
-      ". g . d . f "
-      "h g i d . . "
-      ". . j . k . "
-      ". . m n l . "
-      "o . . . . . ";
+      "a . . . . ."
+      "a . . . . ."
+      "a . . . . ."
+      "a . . . . ."
+      "a . . . . ."
+      "a b . . . ."
+      "a b . . . ."
+      "a b . . . ."
+      ". b . . . ."
+      ". b . . . ."
+      ". b . . . ."
+      ". b . . . ."
+      ". b . . . ."
+      ". . . . . ."
+      ". . . . . ."
+      ". . c . . ."
+      ". . c . . ."
+      ". . c . . ."
+      ". . c . . ."
+      ". . c . . ."
+      ". . c . . ."
+      ". . c . . ."
+      ". . c . . ."
+      ". . . d e ."
+      ". g . d . f"
+      "h g i d . ."
+      ". . j . k ."
+      ". . m n l ."
+      "p o . . . ."
+      "p w q r t v"
+      "p w . r t v"
+      "s w x u t v"
+      "s w x u t v"
+      ". . . z . y"
+      ". . . . . y";
   }
 }
 </style>

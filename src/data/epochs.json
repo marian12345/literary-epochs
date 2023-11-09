@@ -103,5 +103,82 @@
     "timePeriod": "1848 - 1890",
     "gridArea": "o",
     "pageName": "buergerlicher-realismus"
+  },
+  {
+    "id": 15,
+    "name": "Russischer Realismus",
+    "timePeriod": "1840 - 1910",
+    "gridArea": "p",
+    "pageName": "russischer-realismus"
+  },
+  {
+    "id": 16,
+    "name": "Naturalismus",
+    "timePeriod": "1880 - 1900",
+    "gridArea": "q",
+    "pageName": "naturalismus"
+  },
+  {
+    "id": 17,
+    "name": "Junges Wien / Wiener Moderne",
+    "timePeriod": "1890 - 1910",
+    "gridArea": "r",
+    "pageName": "junges-wien-wiener-moderne"
+  },
+  {
+    "id": 18,
+    "name": "Futurismus",
+    "timePeriod": "1909 - 1940",
+    "gridArea": "s",
+    "pageName": "futurismus"
+  },
+  {
+    "id": 19,
+    "name": "Impressionismus",
+    "timePeriod": "1890 - 1920",
+    "gridArea": "t",
+    "pageName": "impressionismus"
+  },
+  {
+    "id": 20,
+    "name": "Expressionismus",
+    "timePeriod": "1905 - 1925",
+    "gridArea": "u",
+    "pageName": "expressionismus"
+  },
+  {
+    "id": 21,
+    "name": "Symbolismus",
+    "timePeriod": "1890 - 1920",
+    "gridArea": "v",
+    "pageName": "symbolismus"
+  },
+  {
+    "id": 22,
+    "name": "Dekadenzdichtung",
+    "timePeriod": "1890 - 1920",
+    "gridArea": "w",
+    "pageName": "dekadenzdichtung"
+  },
+  {
+    "id": 23,
+    "name": "Kubismus",
+    "timePeriod": "1907 - 1918",
+    "gridArea": "x",
+    "pageName": "kubismus"
+  },
+  {
+    "id": 24,
+    "name": "Dadaismus",
+    "timePeriod": "1916 - heute",
+    "gridArea": "y",
+    "pageName": "dadaismus"
+  },
+  {
+    "id": 25,
+    "name": "Surrealismus",
+    "timePeriod": "1920 - 1945",
+    "gridArea": "z",
+    "pageName": "surrealismus"
   }
 ]
