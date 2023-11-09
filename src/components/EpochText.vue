@@ -3,7 +3,9 @@ import { useRoute } from "vue-router";
 import { ref } from "vue";
 import type { Ref } from "vue";
 import type { EpochContent } from "../types/EpochContent";
-
+let contentLoaded: boolean = true;
+/**
+// Fetching Text Data from json file
 const route = useRoute();
 let epochInfo: EpochContent = {
   id: -1,
@@ -18,16 +20,11 @@ try {
   );
 } catch (error) {
   contentLoaded = false;
-}
-
-const name: Ref<string> = ref<string>(epochInfo.name);
-const timePeriod: Ref<string> = ref<string>(epochInfo.timePeriod);
+} */
 </script>
 
 <template>
   <div class="epochInfo" v-if="contentLoaded">
-    <h1>{{ name }}</h1>
-    <h2>{{ timePeriod }}</h2>
     <p>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -55,35 +52,13 @@ const timePeriod: Ref<string> = ref<string>(epochInfo.timePeriod);
   overflow: hidden;
   overflow-wrap: break-word;
 }
-h1 {
-  font-size: 15em;
-  line-height: 1.2;
-}
-h2 {
-  font-size: 10em;
-  margin-top: -6rem;
-}
 p {
   font-size: 1.4em;
 }
 
 @media screen and (max-width: 850px) {
-  h1 {
-    font-size: 5em;
-  }
-  h2 {
-    font-size: 3em;
-    margin-top: 0rem;
-  }
 }
 @media screen and (max-width: 850px) {
-  h1 {
-    font-size: 4em;
-  }
-  h2 {
-    font-size: 2.5em;
-    margin-top: 0rem;
-  }
   p {
     font-size: 1.2em;
   }

@@ -3,6 +3,14 @@ import EpochCard from "./EpochCard.vue";
 import jsonData from "../data/epochs.json";
 import type { Epoch } from "../types/Epoch";
 let cards: Epoch[] = jsonData;
+
+import { useEpochsStore } from "@/stores/epochs";
+const store = useEpochsStore();
+console.log(store.test);
+store.$patch({ test: "mytest2" });
+console.log(store.test);
+store.$patch({ epochs: cards });
+console.log(store.epochs[10].pageName);
 </script>
 
 <template>

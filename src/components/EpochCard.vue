@@ -7,7 +7,10 @@ const props = defineProps<{
 const router: any = useRouter();
 
 function goToEpochPage(): void {
-  router.push({ name: "epoch", params: { epochname: props.epoch.pageName } });
+  router.push({
+    name: "epoch",
+    params: { epochname: props.epoch.pageName },
+  });
 }
 </script>
 

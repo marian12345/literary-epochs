@@ -1,1 +1,0 @@
-const t=13,e="Wiener Volkstheater / Wiener Volkskomödie",o="1815 - 1848",i="wiener-volkstheater-wiener-volkskomoedie",n={id:13,name:e,timePeriod:o,pageName:i};export{n as default,t as id,e as name,i as pageName,o as timePeriod};
