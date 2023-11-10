@@ -3,42 +3,54 @@ import { useRoute } from "vue-router";
 import { ref } from "vue";
 import type { Ref } from "vue";
 import type { EpochContent } from "../types/EpochContent";
-let contentLoaded: boolean = true;
-/**
-// Fetching Text Data from json file
+
+///
+/***
+let loading: boolean = true;
+let error: boolean = false;
+ */
+let loading: Ref<boolean> = ref(true);
+let error: Ref<boolean> = ref(false);
+
+// get current pageName
 const route = useRoute();
-let epochInfo: EpochContent = {
-  id: -1,
-  name: "",
-  timePeriod: "",
-  pageName: "",
-};
-let contentLoaded: boolean = true;
-try {
-  epochInfo = await import(
-    `../data/${route.params.epochname}/${route.params.epochname}.json`
+const pageName = route.params.epochname;
+
+// fetch
+const summaryText = ref([]);
+
+// fetchData function
+async function getData() {
+  const res = await fetch(
+    "https://shy-pine-7435.fly.dev/api/epoches?filters[pageName][$eq]=" +
+      pageName
   );
-} catch (error) {
-  contentLoaded = false;
-} */
+  const finalRes = await res.json();
+  loading.value = false;
+  console.log(loading);
+  if (finalRes.data.length != 1) {
+    error.value = true;
+  }
+
+  summaryText.value = finalRes.data[0].attributes.summary;
+}
+
+getData();
 </script>
 
 <template>
-  <div class="epochInfo" v-if="contentLoaded">
+  <div class="epochInfo" v-if="!loading && !error">
     <p>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-      sit amet.
+      {{ summaryText }}
     </p>
   </div>
+  <div v-else-if="loading && !error">
+    <p>Loading...</p>
+  </div>
   <div v-else>
-    <p>Oh nooo ... An error occured. The content could not be loaded :(</p>
+    <p>
+      Oh nooo ... An error occured. The content is currently not available :(
+    </p>
   </div>
 </template>
 
