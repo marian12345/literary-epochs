@@ -180,5 +180,26 @@
     "timePeriod": "1920 - 1945",
     "gridArea": "z",
     "pageName": "surrealismus"
+  },
+  {
+    "id": 26,
+    "name": "Neue Sachlichkeit",
+    "timePeriod": "1918 - 1933",
+    "gridArea": "aa",
+    "pageName": "neue-sachlichkeit"
+  },
+  {
+    "id": 27,
+    "name": "Das Epische Theater",
+    "timePeriod": "1920 - 1956",
+    "gridArea": "ab",
+    "pageName": "das-epische-theater"
+  },
+  {
+    "id": 28,
+    "name": "Theater im Nationalsozialismus",
+    "timePeriod": "1933 - 1945",
+    "gridArea": "ac",
+    "pageName": "surrealismus"
   }
 ]
