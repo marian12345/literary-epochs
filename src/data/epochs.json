@@ -201,5 +201,12 @@
     "timePeriod": "1933 - 1945",
     "gridArea": "ac",
     "pageName": "surrealismus"
+  },
+  {
+    "id": 29,
+    "name": "Das Absurde Theater",
+    "timePeriod": "1950 - heute",
+    "gridArea": "ad",
+    "pageName": "das-absurde-theater"
   }
 ]

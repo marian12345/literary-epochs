@@ -61,7 +61,7 @@ store.$patch({ epochs: cards });
     "s u x . t v w y"
     "s . aa z ab . . y"
     "s . ac . ab . . y"
-    ". . . . . . . y";
+    ". . . . . . ad y";
 
   grid-auto-columns: minmax(0, 1fr);
   gap: 1rem;
@@ -108,7 +108,7 @@ store.$patch({ epochs: cards });
       "s w x u t v"
       "s . aa z ab y"
       "s . ac z ab y"
-      ". . . . . y";
+      ". . . . ad y";
   }
 }
 </style>
