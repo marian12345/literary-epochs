@@ -18,6 +18,7 @@ const pageName = route.params.epochname;
 
 // fetch
 const summaryText = ref([]);
+const summarySourceLink = ref([]);
 
 // fetchData function
 async function getData() {
@@ -33,6 +34,7 @@ async function getData() {
   }
 
   summaryText.value = finalRes.data[0].attributes.summary;
+  summarySourceLink.value = finalRes.data[0].attributes.sourceLink;
 }
 
 getData();
@@ -42,6 +44,9 @@ getData();
   <div class="epochInfo" v-if="!loading && !error">
     <p>
       {{ summaryText }}
+    </p>
+    <p class="sourceLink">
+      {{ summarySourceLink }}
     </p>
   </div>
   <div v-else-if="loading && !error">
@@ -66,6 +71,10 @@ getData();
 }
 p {
   font-size: 1.4em;
+}
+.sourceLink {
+  font-style: italic;
+  font-size: 1.2em;
 }
 
 @media screen and (max-width: 850px) {

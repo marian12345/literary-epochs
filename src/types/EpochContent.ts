@@ -3,4 +3,5 @@ export type EpochContent = {
   name: string;
   timePeriod: string;
   pageName: string;
+  sourceLink: string;
 };
