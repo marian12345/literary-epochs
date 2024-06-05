@@ -59,9 +59,10 @@ store.$patch({ epochs: cards });
     "p . . r t v w ."
     "s u x . t v w ."
     "s u x . t v w y"
-    "s . aa z ab . . y"
-    "s . ac . ab . . y"
-    ". . . . . . ad y";
+    "s aa ae z ab . . y"
+    "s ag ac z ab . . y"
+    ". ag af . . . ad y"
+    ". . ah . . . . .";
 
   grid-auto-columns: minmax(0, 1fr);
   gap: 1rem;
@@ -106,9 +107,10 @@ store.$patch({ epochs: cards });
       "p w . r t v"
       "s w x u t v"
       "s w x u t v"
-      "s . aa z ab y"
-      "s . ac z ab y"
-      ". . . . ad y";
+      "s aa ae z ab y"
+      "s ag ac z ab y"
+      ". ag af . ad y"
+      ". . ah . . .";
   }
 }
 </style>

@@ -208,5 +208,33 @@
     "timePeriod": "1950 - heute",
     "gridArea": "ad",
     "pageName": "das-absurde-theater"
+  },
+  {
+    "id": 30,
+    "name": "Weimarer Republik",
+    "timePeriod": "1918 - 1933",
+    "gridArea": "ae",
+    "pageName": "weimarer-republik"
+  },
+  {
+    "id": 31,
+    "name": "Nachkriegstheater",
+    "timePeriod": "1945 - 1955",
+    "gridArea": "af",
+    "pageName": "nachkriegstheater"
+  },
+  {
+    "id": 32,
+    "name": "Amerikanisches Sozialdrama",
+    "timePeriod": "1920 - 1960",
+    "gridArea": "ag",
+    "pageName": "amerikanisches-sozialdrama"
+  },
+  {
+    "id": 33,
+    "name": "Theater der BRD und DDR",
+    "timePeriod": "1950 - 1990",
+    "gridArea": "ah",
+    "pageName": "theater-der-brd-und-ddr"
   }
 ]
