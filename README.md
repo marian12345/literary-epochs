@@ -10,5 +10,5 @@ A work in process...
 https://marian12345.github.io/literary-epochs/
 ```
 
-The App is fetching data from a backend based on strapi, which is currently deployed on fly.io.
+The App is fetching data from a strapi backend which is currently deployed on fly.io.
 Since this is a free plan, loading the data might take a few seconds when visiting the website for the first time.
