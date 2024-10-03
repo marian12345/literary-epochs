@@ -45,9 +45,7 @@ getData();
     <p>
       {{ summaryText }}
     </p>
-    <p class="sourceLink">
-      {{ summarySourceLink }}
-    </p>
+    <p class="sourceLink">Quelle: {{ summarySourceLink }}</p>
   </div>
   <div v-else-if="loading && !error">
     <p>Loading...</p>
