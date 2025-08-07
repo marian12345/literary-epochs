@@ -16,8 +16,8 @@ function goToEpochPage(): void {
 
 <template>
   <div class="grid-item" @click="goToEpochPage">
+    <h2>({{ epoch.timePeriod }})</h2>
     <h1>
-      <h2>({{ epoch.timePeriod }})</h2>
       {{ epoch.name }}
     </h1>
   </div>
