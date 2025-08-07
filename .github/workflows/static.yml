@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           # Upload dist repository
-          name: my-artifact
+          name: literary-epochs
           path: build/
       - name: Deploy to GitHub Pages
         id: deployment
