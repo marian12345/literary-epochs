@@ -10,10 +10,7 @@ store.$patch({ epochs: cards });
 </script>
 
 <template>
-  <div class="banner-wrapper">
-    <img src="/banner.jpg" alt="Website Banner" class="banner" />
-  </div>
-
+  <Banner />
   <div class="grid-container">
     <EpochCard
       v-for="card in cards"
@@ -26,16 +23,6 @@ store.$patch({ epochs: cards });
 </template>
 
 <style scoped>
-.banner-wrapper {
-  width: 100%;
-  height: 60vh;
-  overflow: hidden;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-}
-
 .banner img {
   width: 100%;
   height: 100%;

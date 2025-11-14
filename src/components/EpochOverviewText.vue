@@ -51,14 +51,15 @@ const timePeriod: Ref<string> = ref<string>(timePeriodOfEpoch);
 
   overflow: hidden;
   overflow-wrap: break-word;
+  container-type: inline-size;
 }
 h1 {
-  font-size: 15em;
+  font-size: clamp(2em, 10cqw, 11em);
   line-height: 1.2;
 }
 h2 {
-  font-size: 10em;
-  margin-top: -6rem;
+  font-size: clamp(1em, 7cqw, 6em);
+  margin-top: -3rem;
 }
 
 @media screen and (max-width: 850px) {
