@@ -10,7 +10,6 @@ store.$patch({ epochs: cards });
 </script>
 
 <template>
-  <Banner />
   <div class="grid-container">
     <EpochCard
       v-for="card in cards"

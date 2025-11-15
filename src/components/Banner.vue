@@ -1,9 +1,55 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useEpochsStore } from "@/stores/epochs";
+import type { Epoch } from "../types/Epoch";
+import { useRoute } from "vue-router";
+import type { Ref } from "vue";
+import { ref } from "vue";
+// fetching name and time period from store
+// initializing route and store
+const store = useEpochsStore();
+const route = useRoute();
+
+// find the current epoch in store.epochs
+let currentEpoch: Epoch | undefined = store.epochs.find(
+  (epoch) => route.params.epochname == epoch.pageName
+);
+
+// assign name and timePeriod variables
+let nameOfEpoch: string = "";
+let contentLoaded: boolean = false;
+let bannerImgUrl: string = "banner";
+// check if currentEpoch is set
+if (typeof currentEpoch != "undefined") {
+  nameOfEpoch = currentEpoch.name;
+  bannerImgUrl = "";
+  contentLoaded = true;
+}
+
+// set it up to make it usable for vue
+const imgUrl = bannerImgUrl + nameOfEpoch + ".jpg";
+
+//functions to check if the image exists
+const exists = ref<boolean | null>(null);
+function onLoad() {
+  exists.value = true;
+}
+
+function onError() {
+  exists.value = false;
+}
+</script>
 
 <template>
   <main>
     <div class="banner-wrapper">
-      <img src="/banner.jpg" alt="Website Banner" class="banner" />
+      <img
+        :src="imgUrl"
+        @load="onLoad"
+        @error="onError"
+        alt="Website Banner"
+        class="banner"
+      />
+      <p v-if="exists === false">Image not found</p>
     </div>
   </main>
 </template>

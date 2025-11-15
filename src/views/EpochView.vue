@@ -11,6 +11,7 @@ const route = useRoute();
 <template>
   <main>
     <div class="bannerbox">
+      <Banner />
       <EpochOverviewText />
     </div>
     <Suspense>
