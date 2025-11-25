@@ -17,10 +17,14 @@ let currentEpoch: Epoch | undefined = store.epochs.find(
 // set it up to make it usable for vue
 const imgUrl = ref<string>("");
 
-if (typeof currentEpoch != "undefined") {
-  imgUrl.value = `/images/${currentEpoch.pageName}.jpg`;
+function assetUrl(name: string) {
+  return new URL(`../assets/images/${name}`, import.meta.url).href;
+}
+
+if (currentEpoch) {
+  imgUrl.value = assetUrl(`${currentEpoch.pageName}.jpg`);
 } else {
-  imgUrl.value = `/images/banner.jpg`; // also in public
+  imgUrl.value = assetUrl("banner.jpg");
 }
 
 //functions to check if the image exists
