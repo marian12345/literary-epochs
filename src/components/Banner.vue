@@ -14,19 +14,14 @@ let currentEpoch: Epoch | undefined = store.epochs.find(
   (epoch) => route.params.epochname == epoch.pageName
 );
 
-// assign name and timePeriod variables
-let nameOfEpoch: string = "";
-let contentLoaded: boolean = false;
-let bannerImgUrl: string = "banner";
-// check if currentEpoch is set
-if (typeof currentEpoch != "undefined") {
-  nameOfEpoch = currentEpoch.name;
-  bannerImgUrl = "";
-  contentLoaded = true;
-}
-
 // set it up to make it usable for vue
-const imgUrl = bannerImgUrl + nameOfEpoch + ".jpg";
+const imgUrl = ref<string>("");
+
+if (typeof currentEpoch != "undefined") {
+  imgUrl.value = `/images/${currentEpoch.pageName}.jpg`;
+} else {
+  imgUrl.value = `/images/banner.jpg`; // also in public
+}
 
 //functions to check if the image exists
 const exists = ref<boolean | null>(null);
@@ -49,7 +44,7 @@ function onError() {
         alt="Website Banner"
         class="banner"
       />
-      <p v-if="exists === false">Image not found</p>
+      <p v-if="exists === false">No image yet</p>
     </div>
   </main>
 </template>

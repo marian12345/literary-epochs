@@ -28,7 +28,7 @@ async function getData() {
   );
   const finalRes = await res.json();
   loading.value = false;
-  console.log(loading);
+
   if (finalRes.data.length != 1) {
     error.value = true;
   }
