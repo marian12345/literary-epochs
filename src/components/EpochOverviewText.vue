@@ -56,10 +56,12 @@ const timePeriod: Ref<string> = ref<string>(timePeriodOfEpoch);
 h1 {
   font-size: clamp(2em, 10cqw, 11em);
   line-height: 1.2;
+  text-shadow: 2px 2px 2px black;
 }
 h2 {
   font-size: clamp(1em, 7cqw, 6em);
   margin-top: -3rem;
+  text-shadow: 2px 2px 2px black;
 }
 
 @media screen and (max-width: 850px) {
