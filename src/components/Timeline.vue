@@ -30,7 +30,8 @@ store.$patch({ epochs: cards });
 }
 .grid-container {
   position: relative;
-  top: 45vh;
+  padding-top: 45vh;
+
   display: grid;
   grid-template-areas:
     "a . . . . . . ."

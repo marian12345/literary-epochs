@@ -39,18 +39,16 @@ function onError() {
 </script>
 
 <template>
-  <main>
-    <div class="banner-wrapper">
-      <img
-        :src="imgUrl"
-        @load="onLoad"
-        @error="onError"
-        alt="Website Banner"
-        class="banner"
-      />
-      <p v-if="exists === false">No image yet</p>
-    </div>
-  </main>
+  <div class="banner-wrapper">
+    <img
+      :src="imgUrl"
+      @load="onLoad"
+      @error="onError"
+      alt="Website Banner"
+      class="banner"
+    />
+    <p v-if="exists === false">No image yet</p>
+  </div>
 </template>
 
 <style scoped>

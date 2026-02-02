@@ -4,7 +4,7 @@ import EpochText from "../components/EpochText.vue";
 import EpochOverviewText from "../components/EpochOverviewText.vue";
 import CustomBackButton from "../components/CustomBackButton.vue";
 import Banner from "../components/Banner.vue";
-
+import ImpressumText from "@/components/ImpressumText.vue";
 const route = useRoute();
 </script>
 
@@ -18,6 +18,7 @@ const route = useRoute();
       <EpochText />
       <template #fallback> Loading... </template>
     </Suspense>
+    <ImpressumText />
     <CustomBackButton text="Zurück" />
   </main>
 </template>
