@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CustomBackButton from "../components/CustomBackButton.vue";
+import CustomBackButtonComponent from "../components/CustomBackButtonComponent.vue";
 </script>
 
 <template>
@@ -10,12 +10,8 @@ import CustomBackButton from "../components/CustomBackButton.vue";
       <p>Address</p>
       <p>Email: example@example.com</p>
     </div>
-    <CustomBackButton text="Zurück" />
+    <CustomBackButtonComponent text="Zurück" />
   </main>
 </template>
 
-<style scoped>
-.impressum {
-  background: var(--color-background);
-}
-</style>
+<style scoped></style>

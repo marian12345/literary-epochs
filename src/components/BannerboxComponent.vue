@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import EpochOverviewText from "../components/EpochOverviewText.vue";
-import Banner from "../components/Banner.vue";
+import HeadlinesComponent from "./HeadlinesComponent.vue";
+import BannerComponent from "./BannerComponent.vue";
 </script>
 
 <template>
   <div class="bannerbox">
-    <Banner />
-    <EpochOverviewText />
+    <BannerComponent />
+    <HeadlinesComponent />
   </div>
 </template>
 

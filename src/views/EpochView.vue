@@ -1,23 +1,19 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router";
-import EpochText from "../components/EpochText.vue";
-import EpochOverviewText from "../components/EpochOverviewText.vue";
-import CustomBackButton from "../components/CustomBackButton.vue";
-import Banner from "../components/Banner.vue";
-import ImpressumText from "@/components/ImpressumText.vue";
+import EpochTextComponent from "../components/EpochTextComponent.vue";
+import CustomBackButtonComponent from "../components/CustomBackButtonComponent.vue";
+import ImpressumComponent from "@/components/ImpressumComponent.vue";
 import BannerboxComponent from "@/components/BannerboxComponent.vue";
-const route = useRoute();
 </script>
 
 <template>
   <main>
     <BannerboxComponent />
     <Suspense>
-      <EpochText />
+      <EpochTextComponent />
       <template #fallback> Loading... </template>
     </Suspense>
-    <ImpressumText />
-    <CustomBackButton text="Zurück" />
+    <ImpressumComponent />
+    <CustomBackButtonComponent text="Zurück" />
   </main>
 </template>
 

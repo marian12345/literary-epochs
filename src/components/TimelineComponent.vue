@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import EpochCard from "./EpochCard.vue";
+import EpochCardComponent from "./EpochCardComponent.vue";
 import jsonData from "../data/epochs.json";
 import type { Epoch } from "../types/Epoch";
 import { useEpochsStore } from "@/stores/epochs";
@@ -11,7 +11,7 @@ store.$patch({ epochs: cards });
 
 <template>
   <div class="grid-container">
-    <EpochCard
+    <EpochCardComponent
       v-for="card in cards"
       :key="card.id"
       :class="'grid-item-' + card.id"
