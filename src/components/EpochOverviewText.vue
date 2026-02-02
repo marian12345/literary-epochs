@@ -25,6 +25,8 @@ if (typeof currentEpoch != "undefined") {
   nameOfEpoch = currentEpoch.name;
   timePeriodOfEpoch = currentEpoch.timePeriod;
   contentLoaded = true;
+} else {
+  nameOfEpoch = "Literatur- und Theaterepochen";
 }
 
 // set it up to make it usable for vue
@@ -37,8 +39,8 @@ const timePeriod: Ref<string> = ref<string>(timePeriodOfEpoch);
     <h1>{{ name }}</h1>
     <h2>{{ timePeriod }}</h2>
   </div>
-  <div v-else>
-    <p>Oh nooo ... An error occured. The content could not be loaded :(</p>
+  <div class="epochInfo headlineHomeView" v-else>
+    <h1>{{ name }}</h1>
   </div>
 </template>
 
@@ -52,6 +54,9 @@ const timePeriod: Ref<string> = ref<string>(timePeriodOfEpoch);
   overflow: hidden;
   overflow-wrap: break-word;
   container-type: inline-size;
+}
+.headlineHomeView {
+  margin-top: -10vh;
 }
 h1 {
   font-size: clamp(2em, 10cqw, 11em);

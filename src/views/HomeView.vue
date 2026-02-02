@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import Timeline from "../components/Timeline.vue";
-import Banner from "../components/Banner.vue";
 import ImpressumText from "@/components/ImpressumText.vue";
+import BannerboxComponent from "@/components/BannerboxComponent.vue";
 </script>
 
 <template>
   <main>
-    <Banner />
+    <BannerboxComponent />
     <Timeline />
     <ImpressumText />
   </main>
