@@ -13,9 +13,7 @@
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
   padding: 1rem;
-
-  background: var(--color-background-mute);
 }
 </style>
