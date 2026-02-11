@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import theAwakening from "@/assets/gifs/theAwakening.gif";
 </script>
 
