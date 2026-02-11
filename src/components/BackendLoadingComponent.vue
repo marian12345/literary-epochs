@@ -6,8 +6,8 @@ import theAwakening from "@/assets/gifs/theAwakening.gif";
   <div class="loading-screen">
     <div class="content">
       <img :src="theAwakening" alt="Animation" class="animationGif" />
-      <h1>Waking up server…</h1>
-      <small>This may take a few seconds</small>
+      <h1>Waking up server ...</h1>
+      <p>This may take a few seconds</p>
     </div>
   </div>
 </template>
@@ -31,5 +31,14 @@ import theAwakening from "@/assets/gifs/theAwakening.gif";
   max-width: 40%;
   height: auto;
   margin-bottom: 1rem;
+}
+
+h1 {
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05rem;
+}
+
+p {
+  font-style: italic;
 }
 </style>
