@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import BackArrow from "../components/icons/BackArrow.vue";
+import BackArrow from "@/assets/icons/BackArrow.vue";
 const props = defineProps<{
   text?: String;
 }>();
